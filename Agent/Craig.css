@@ -1,0 +1,1417 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.agentAll{
+    width: 100%;
+    height: 4130px;
+    background-color: white;
+}
+
+.scrollyBar{
+    width: 80px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    border-right: 1px solid rgba(188, 188, 190, 0.2);
+    z-index: 25;
+  }
+  .hamburgerContainer {
+    transition: 1s;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+   .hamburger {
+    height: 20px;
+    width: 20px;
+    transform-origin: center;
+    animation: rotate-appear-animation 1s ease-in-out forwards;
+  }
+  
+  .hamburger:hover {
+    cursor: pointer;
+  }
+  
+  @keyframes rotate-appear-animation {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(180deg);
+    }
+  }
+  
+  .sidebar.open {
+    animation: sidebaropen 1.2s ease-in-out 1 normal forwards;
+  }
+  
+  @keyframes sidebaropen {
+    0% {
+      left: -445px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
+  
+  .sidebar {
+    width: 440px;
+    overflow: hidden;
+    height: 100vh;
+    z-index: 7;
+    background-color: white;
+    position: fixed;
+    left: -445px;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .sidebarContainer {
+    width: 430px;
+    height: 100vh;
+    margin: 100px 0px 0px 50px;
+  }
+  
+   .exploreV {
+    font-size: 25px;
+    font-weight: 700;
+    color: #081c3a;
+    margin-bottom: 30px;
+  }
+  
+  .sidebarScrollContainer {
+    width: 380px;
+    height: calc(100vh - 180px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .ScrollboxSecond {
+    margin-top: 50px;
+  }
+  
+  .sidebarScrollbox {
+    width: 360px;
+  }
+  
+  .scrollboxtitle {
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .scrollboxtitle :nth-child(1) {
+    letter-spacing: 2px;
+    font-size: 10px;
+  }
+  
+  .scrollboxtitle :nth-child(2) {
+    width: 110px;
+    height: 1px;
+    border-bottom: 1px solid #f2f2f6;
+  }
+  
+  .infocontent {
+    margin: 10px 5px 10px 0;
+    border: 1px solid #f2f2f6;
+    width: 340px;
+    height: 50px;
+    transition: 0.5s;
+    border-radius: 5px;
+    background-color: #f7f8fc;
+  }
+  
+  .scrollboxcontent {
+    margin: 10px 5px 10px 0;
+    border: 1px solid #f2f2f6;
+    width: 340px;
+    height: 100px;
+    transition: 0.5s;
+    border-radius: 5px;
+  }
+  
+  .scrollboxcontent:hover {
+    transform: scale(1.05);
+    transition-timing-function: ease-in-out;
+  }
+  
+  .scrollboxcontent:hover .Africa {
+    background: url(./assets/EgyptSimbel.optimal.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+   .scrollboxcontent:hover .Asia {
+    background: url(./assets/oahu.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  .scrollboxcontent:hover .Europe {
+    background: url(./assets/sailboat.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  .scrollboxcontent:hover .France {
+    background: url(./assets/Greecenight.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  .scrollboxcontent:hover .Greece {
+    background: url(./assets/Greecepicture.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  .scrollboxcontent:hover .Egypt {
+    background: url(./assets/Egypt.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  .scrollboxcontent:hover .boxcontent_locations .boxcontent_card .cardName {
+    color: white;
+    font-weight: 700;
+  }
+  
+  .scrollboxcontent:hover .boxcontent_locations .boxcontent_card .sixlocations {
+    color: white;
+  }
+  
+  .scrollboxcontent:hover .boxcontent_locations .boxcontent_gonext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .scrollboxcontent:hover .boxcontent_locations .boxcontent_gonext :nth-child(1) {
+    color: white;
+  }
+  
+  .scrollboxcontent:hover .boxcontent_locations.contact {
+    background-color: #f7f8fc;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .scrollboxcontent:hover .boxcontent_locations.contact:hover .boxcontent_card {
+    transform: translate(15px);
+  }
+  
+   .scrollboxcontent:hover .boxcontent_locations.contact:hover .info_gonext {
+    transform: translate(15px);
+  }
+  
+  .scrollboxcontent:hover .boxcontent_locations .info_gonext :nth-child(1) {
+    color: #152844;
+    background-color: #f7f8fc;
+    border: 1px solid #f2f2f6;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .boxcontent_locations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+   .boxcontent_locations:hover {
+    cursor: pointer;
+  }
+  
+   .boxcontent_card {
+    padding: 20px 20px;
+  }
+  
+  .boxcontent_card:hover {
+    cursor: pointer;
+  }
+  
+  .cardName {
+    font-size: 20px;
+    color: #081c3a;
+  }
+  
+  .sixlocations {
+    font-size: 12px;
+    color: #4a586f;
+    letter-spacing: 2px;
+    padding: 15px 0px;
+  }
+  
+   .boxcontent_gonext {
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    display: none;
+  }
+  
+  .followustitle {
+    width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 0;
+  }
+  
+  .followustitle :nth-child(1) {
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+  
+   .followusIcon {
+    display: flex;
+    align-items: center;
+    width: 220px;
+  }
+  
+  .followusIcon_circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f7f8fc;
+    margin-right: 15px;
+  }
+  .followusIcon_circle:hover {
+    cursor: pointer;
+  }
+  
+   .box_FII {
+    width: 80px;
+    height: 120px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .companyicon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .companyicon:hover {
+    cursor: pointer;
+    background-color: #3572ff;
+  }
+  
+  .header{
+      width: 100%;
+      height: 100vh;
+     background: url(../assets/CRATERLAKE.jpg);
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+  
+  }
+  #main{
+      width: 100%;
+      height: 80px;
+      /* background-color: deeppink; */
+      display: flex;
+      margin-bottom: 300px;
+  }
+  #mainLeft{
+      position: fixed;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      color: #081c3a;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 80px;
+      cursor: pointer;
+      z-index: 999;
+      
+  }
+  #mainRight{
+      width: calc(100% - 80px);
+      height: 80px;
+     background-color: #fff;
+     position: fixed;
+    margin-left: 80px;
+    margin-top: -80px;
+    z-index: 80;
+  }
+  
+  #model{
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      background: rgba(15, 12, 0, 0.4);
+  }
+  
+  #mainS{
+      font-weight: 600;
+              color: rgb(255, 255, 255);
+              font-size: 22px;
+              letter-spacing: -0.02em;
+              margin-left: 110px;
+              margin-top: 30px;
+              position: fixed;
+              z-index: 90;
+            
+  }
+  #hiddenMenu {
+      width: 450px;
+      height: 55px;
+      margin-top: -45px;
+      margin-left: 380px;
+      display: flex;
+      margin-top: 20px;
+     position: absolute;
+   
+     
+  }
+  .hiddenMenuBox{
+      width: 100%;
+      height: 100%;
+      line-height: 55px;
+      text-align: center;
+      color: #081c3a;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+     
+  }
+  .hiddenMenuBox:hover{
+      background-color:  #f7f8fc;
+  }
+  #headerR {
+      width: 184px;
+      height: 44px;
+      color: rgb(255, 255, 255);
+      border: 1px solid rgba(228, 218, 217, 0.3);
+      border-radius: 3px;
+      font-size: 11px;
+      margin-top: 30px;
+      margin-left: 70%;
+      position: fixed;
+      z-index: 90;
+  }
+  
+  #headerRB {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 3px;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+     text-align: center;
+     margin-top: 12px;
+  }
+  #mainRightBox{
+      width: 520px;
+      height: 330px;
+      background-color: #fff;
+      margin-left: 48%;
+      margin-top: 81px;
+      border: 1px solid rgba(228, 218, 217, 0.3) ;
+      border-radius: 10px;
+      position: fixed;
+      display: none;
+  }
+  #headerRTwo {
+      width: 184px;
+      height: 44px;
+      color: rgb(255, 255, 255);
+      border: 1px solid rgba(228, 218, 217, 0.3);
+      border-radius: 3px;
+      font-size: 11px;
+      margin-top: 30px;
+      margin-left: 70%;
+      position: fixed;
+      display: none;
+  }
+  
+  .title {
+      width: 630px;
+      height: 289px;
+      /* position: absolute; */
+      /* margin-left: 10%;
+      margin-top: 170px; */
+      color: #fff;
+      margin: auto;
+  
+  }
+  
+  .subtitle {
+      font-size: 11px;
+      line-height: 1.4em;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-align: center;
+  
+  }
+  
+  .subTitleH {
+      font-size: 50px;
+      line-height: 1.3em;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-top: 5px;
+      text-align: center;
+      font-size: 60px;
+  }
+  
+  .titleA {
+      width: 172px;
+      color: #081c3a;
+      line-height: 52px;
+      text-align: center;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+    
+  }
+  
+  .titleText {
+      width: 172px;
+      height: 52px;
+      background-color: #fff;
+      border-radius: 5px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-decoration: none;
+      margin-top: 42px;
+      position: absolute;
+      /* z-index: 99; */
+      transition: all 2s ease;
+  }
+  .titleText:hover{
+      transform: scale(1.1);
+      opacity: 0.8;
+  }
+  
+  
+  .hiddenboxFLEX{
+      display: flex;
+      justify-content: space-between;
+      width: 490px;
+      height: 120px;
+      margin-left: 15px;
+      margin-top: 3px;
+    }
+    
+  .scrollHidden{
+      margin: 10px 5px 10px 0;
+      border: 1px solid #f2f2f6;
+      width: 340px;
+      height: 100px;
+      transition: 0.5s;
+      border-radius: 5px;
+    }
+    
+  .scrollHidden:hover {
+      transform: scale(1.05);
+      transition-timing-function: ease-in-out;
+      cursor: pointer;
+    }
+    
+  .scrollHidden:hover .France {
+      background: url(https://assets.website-files.com/606764630d23c37bf9d41bb1/607dcd1ef1d9b0b767714525_001.jpeg) no-repeat;
+      background-size: cover;
+    }
+    
+   .scrollHidden:hover .Asia {
+      background: url(https://assets.website-files.com/606764630d23c37bf9d41bb1/607dcd2961c3e396968aac28_031.jpeg) no-repeat;
+      background-size: cover;
+    }
+    
+  .scrollHidden:hover .Greece {
+      background: url(https://assets.website-files.com/606764630d23c37bf9d41bb1/607dcd3355581e17e093caed_011.jpeg) no-repeat;
+      background-size: cover;
+    }
+    
+  .scrollHidden:hover .Egypt {
+      background: url(https://assets.website-files.com/606764630d23c37bf9d41bb1/607dcd3ca4b006d82a3c6859_026.jpeg) no-repeat;
+      background-size: cover;
+    }
+    
+  .scrollHidden:hover .boxcontent_locations .boxcontent_card .cardName {
+      color: white;
+      font-weight: 700;
+    }
+    
+  .scrollHidden:hover .boxcontent_locations .boxcontent_card .sixlocations {
+      color: white;
+    }
+    
+  .scrollHidden:hover .boxcontent_locations .boxcontent_gonext {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+  .scrollHidden:hover .boxcontent_locations .boxcontent_gonext :nth-child(1) {
+      color: white;
+    }
+    
+  .scrollHidden:hover .boxcontent_locations.contact {
+      background-color: #f7f8fc;
+      transition: 0.5s;
+      transition-timing-function: ease-in-out;
+    }
+    
+  .scrollHidden:hover .boxcontent_locations.contact:hover .boxcontent_card {
+      transform: translate(15px);
+    }
+    
+  .scrollHidden:hover .boxcontent_locations.contact:hover .info_gonext {
+      transform: translate(15px);
+    }
+    
+  .scrollHidden:hover .boxcontent_locations .info_gonext :nth-child(1) {
+      color: #152844;
+      background-color: #f7f8fc;
+      border: 1px solid #f2f2f6;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  .boxcontent_locations {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+  .boxcontent_card {
+      padding: 20px 20px;
+    }
+    
+  .cardName {
+      font-size: 20px;
+      color: #081c3a;
+    }
+    
+  .sixlocations {
+      font-size: 12px;
+      color: #4a586f;
+      letter-spacing: 2px;
+      padding: 15px 0px;
+    }
+    
+  .boxcontent_gonext {
+      border-radius: 50%;
+      border: 1px solid white;
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      display: none;
+    }
+  
+  
+    .circle1 {
+      position: absolute;
+      top: 160px;
+      right: 200px;
+      width: 150px;
+      height: 150px;
+      border: 1px dotted #FFFFFF;
+      border-radius: 50%;
+    }
+    .dot1 {
+      position: absolute;
+      top: 185px;
+      right: 225px;
+      width: 100px;
+      height: 100px;
+      border: 1px dotted #FFFFFF;
+      background-color: rgba(192, 192, 211, 0.2);
+      border-radius: 50%;
+    }
+    .circle2 {
+      display: none;
+      position: absolute;
+      top: 160px;
+      right: 200px;
+      width: 150px;
+      height: 150px;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+    }
+    .dot2 {
+      display: none;
+      position: absolute;
+      top: 185px;
+      right: 225px;
+      width: 100px;
+      height: 100px;
+      background-color: #081c3a;
+      border-radius: 50%;
+    }
+    .filmicon {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      color: #FFFFFF;
+      position: absolute;
+      top: 225px;
+      right: 133px;
+      width: 150px;
+      height: 150px;
+    }
+    @keyframes circle {
+      0% {
+        background: url(https://assets.website-files.com/60675f13ea324fdd4af9ef2a/6074ef622e17622ba2a018a4_Villa0017.jpeg) no-repeat;
+        background-size: 200px 200px;
+        transform: scale(1.8);
+        border: 1px solid rgba(139, 139, 160, 0.787);
+      }
+      50% {
+        background: url(https://assets.website-files.com/60675f13ea324fdd4af9ef2a/6074ef622e17622ba2a018a4_Villa0017.jpeg) no-repeat;
+        background-size: 200px 200px;
+        transform: scale(2.2);
+        border: 5px solid rgba(139, 139, 160, 0.787);
+      }
+      100% {
+        background: url(https://assets.website-files.com/60675f13ea324fdd4af9ef2a/6074ef622e17622ba2a018a4_Villa0017.jpeg) no-repeat;
+        background-size: 200px 200px;
+        transform: scale(1.8);
+        border: 1px solid rgba(139, 139, 160, 0.787);
+      }
+    }
+    @keyframes dot {
+      0% {
+        transform: scale(2.5);
+        border: 1px solid rgba(192, 192, 211, 0.6);
+      }
+      50% {
+        transform: scale(2.9);
+        border: 11px solid rgba(192, 192, 211, 0.6);
+      }
+      100% {
+        transform: scale(2.5);
+        border: 1px solid rgba(192, 192, 211, 0.6);
+      }
+    }
+
+    /* 第二个板块 */
+  .thefutureoftravel {
+    width: 100vw;
+    height: 860px;
+  }
+  
+.thefutureoftravel_center {
+    width: 1400px;
+    height: 600px;
+    padding: 100px 0px 0px 100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+.thefutureoftravel_Container {
+    width: 1325px;
+    height: 580px;
+    background-color: white;
+    position: absolute;
+    top: -100px;
+    padding: 25px;
+    border-radius: 10px;
+  }
+ .thefutureoftravel_title {
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.4em;
+    font-family: Inter, sans-serif;
+    color: #081c3a;
+  }
+  
+.thefutureoftravelBlock {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.familytravel {
+    width: 550px;
+    height: auto;
+    border-radius: 12px;
+    padding: 60px;
+  }
+  
+.familytravel_title {
+    font-family: Poppins, sans-serif;
+    font-size: 48px;
+    line-height: 1.25em;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin-bottom: 35px;
+    color: #081c3a;
+  }
+  
+.familytravel_content {
+    color: #516381;
+    font-size: 19px;
+    line-height: 1.6em;
+    font-weight: 400;
+    margin-bottom: 35px;
+  }
+  
+.familytravel_contactus {
+    width: 150px;
+    height: 50px;
+    background-color: #3572ff;
+    font-size: 14px;
+    line-height: 50px;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  
+.familytravel_contactus:hover {
+    cursor: pointer;
+    background-color: #081c3a;
+    transform: scale(1.05);
+  }
+  
+.familytravel_img {
+    width: 600px;
+    height: 450px;
+    background: url(../assets/Family0012.jpeg) no-repeat;
+    background-size: contain;
+    margin-top: 20px;
+    margin-right: 15px;
+    border-radius: 5px;
+  }
+  .travelA{
+    text-decoration: none;
+  }
+
+.thefutureoftravel_right {
+    width: 600px;
+    height: 500px;
+  }
+  
+.thefutureoftravel_pic {
+    min-width: 200px;
+    width: 600px;
+    height: 470px;
+    column-count: 2;
+    column-gap: 5px;
+    counter-reset: count;
+    list-style: none;
+  }
+  
+  .thefutureoftravel_pic li {
+    position: relative;
+    margin-bottom: 5px;
+  }
+  
+  .thefutureoftravel_pic li img {
+    width: 225px;
+    height: 225px;
+    border-radius: 3px 10px 10px 3px;
+  }
+  
+  .thefutureoftravel_pic li #portrait_img {
+    width: 295px;
+    height: 460px;
+    border-radius: 10px;
+  }
+
+/* 盒子 */
+
+.agentBoxContainer {
+    display: flex;
+    width: 1150px;
+    height: 200px;
+    border: 1px solid rgba(192, 192, 211, 0.2);
+    border-radius: 12px;
+    margin: auto;
+  }
+  
+.agentContactBox {
+    width: 250px;
+    height: 150px;
+    padding: 36px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
+    color: #516381;
+    border-radius: 12px;
+    transition: 1s;
+  }
+  
+.agentContactBox:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    z-index: 2;
+    box-shadow: 0 9px 42px -6px rgba(53, 64, 117, 0.5);
+    background-color: white;
+  }
+  
+.circleIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(192, 192, 211, 0.2);
+    border-radius: 100px;
+    background-color: #fff;
+  }
+
+.agentBoxsubTitle {
+    margin: 25px 0;
+
+  }
+  
+.agentinfo {
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+.agentinfo ul {
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+.agentinfo ul:hover {
+    cursor: pointer;
+  }
+  
+.agentinfo ul div {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(192, 192, 211, 0.2);
+    border-radius: 100px;
+    background-color: #f7f8fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ .agentinfo ul div svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+.verticalLine {
+    width: 1px;
+    height: 200px;
+    background-color: rgba(192, 192, 211, 0.2);
+  }
+/* 第三个板块 */
+
+.Display {
+    width: calc(100% - 80px);
+    position: relative;
+    margin-left: 80px;
+    height: 900px;
+      background-color: #f7f8fc;
+    }
+  .displayInfo {
+      margin: auto;
+    }
+    
+  .displayContainer {
+      margin: 0 auto;
+      width: calc(100% - 80px);
+      height: 900px;
+      overflow: hidden;
+    }
+    
+  .displayHeader {
+      width: fit-content;
+      margin: 50px 0;
+      color: #081c3a;
+    }
+    
+  .displaySubtitle {
+      margin-top: 25px;
+      font-size: 11px;
+      line-height: 1.4em;
+      font-weight: 400;
+      letter-spacing: 3px;
+      font-family: Inter, sans-serif;
+      margin-left: 35px;
+    }
+    
+  .displayTitle {
+      margin-top: 30px;
+      font-family: Poppins, sans-serif;
+      font-size: 48px;
+      line-height: 1.25em;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      margin-left: 35px;
+    }
+/* 下面盒子 */
+
+.egypt {
+    width: 1290px;
+    height: 472px;
+}
+
+.left,
+.middle,
+.right {
+    width: 383px;
+    height: 471px;
+    border: 1px solid rgba(192, 192, 211, 0.2);
+    border-radius: 12px;
+    margin-left: 30px;
+    display: inline-block;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.left {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.left:hover,
+.left:focus,
+.left:active {
+    box-shadow: 0 10px 10px -10px;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.middle {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.middle:hover,
+.middle:focus,
+.middle:active {
+    box-shadow: 0 10px 10px -10px;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.right {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.right:hover,
+.right:focus,
+.rightt:active {
+    box-shadow: 0 10px 10px -10px;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.egyptLeftImg,
+.egyptMiddleImg,
+.egyptRightImg{
+    width: 345px;
+    height: 250px;
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-top: 18px;
+    margin-left: 18px;
+}
+
+.left :hover .egyptLeftImg {
+    transform: scale(1.1);
+}
+
+.egyptLeftImg {
+    background-image: url(../assets/lakesailing.jpg);
+}
+
+.egyptMiddleImg {
+    background-image: url(../assets/efca64a7.jpg)
+}
+
+.egyptRightImg {
+    background-image: url(../assets/ocean.jpg)
+}
+
+
+.h3 {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+    line-height: 1.25em;
+    letter-spacing: -0.03em;
+    margin-left: 28px;
+    margin-top: 18px;
+}
+
+.body {
+    width: 320px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.4em;
+    color: #516381;
+    font-weight: 400;
+    margin-left: 28px;
+    margin-top: 10px;
+}
+
+.bottom {
+    width: 345px;
+    height: 60px;
+    margin-left: 18px;
+    border-top: 1px solid rgba(192, 192, 211, 0.2);
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vacationPrice {
+    width: 110px;
+    height: 36px;
+    align-items: center;
+    margin-top: 18px;
+    margin-left: 12px;
+}
+
+.details {
+    width: 105px;
+    height: 40px;
+    align-items: center;
+    border: 1px solid rgba(192, 192, 211, 0.2);
+    border-radius: 5px;
+    align-items: center;
+    margin-top: 18px;
+    margin-right: 12px;
+}
+
+.priceTop {
+    line-height: 1.4em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 8px;
+}
+
+.priceBottom {
+    line-height: 2.4em;
+    font-weight: 450;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.dDetails {
+    padding: 20px;
+    line-height: 42px;
+    color: #081c3a;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* 第四个板块 */
+
+.background {
+    /* width: calc(100% - 80px);
+    position: relative;
+    margin-left: 80px;; */
+    width: 100%;
+    height: 1000px;
+    background: url(../assets/Egypt.jpg) no-repeat;
+    background-size: cover;
+    background-color: rgba(15, 19, 38, 0.55);
+    overflow: hidden;
+  }
+  
+  .backBox {
+    position: relative;
+    margin-top: 350px;
+  }
+  
+  .backgroundInfo{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .background_talk {
+    letter-spacing: 2px;
+    color: white;
+    font-size: 13px;
+  }
+  
+   .background_title {
+    text-align: center;
+    width: 500px;
+    margin: 20px 0;
+    color: white;
+    word-spacing: 2px;
+    font-size: 45px;
+    font-weight: bold;
+    transition: 2s;
+    transform-style: preserve-3d;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+  }
+  
+  .background_text {
+    text-align: center;
+    width: 770px;
+    margin-bottom: 20px;
+    color: white;
+    word-spacing: 2px;
+    font-size: 25px;
+    animation: zoomin 2s ease-in-out 1 normal forwards;
+  }
+  
+  @keyframes zoomin {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* 第五个板块 */
+  
+  .agentBox{
+    width: calc(100% - 80px);
+    position: relative;
+    margin-left: 80px;
+    height: 670px;
+    background-color: #f7f8fc;
+  }
+  
+  .ourAgents {
+    width: 1367px;
+    height: 550px;
+    /* padding: 100px 0px 200px 100px; */
+    background-color: white;
+    position: absolute;
+    margin-top: -60px;
+    border-radius: 10px;
+    margin-left: 3%;
+  }
+  
+  .ourContainer {
+    width: 1360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1e425f;
+  }
+  
+  .agtitle {
+    letter-spacing: 2px;
+    font-size: 15px;
+  }
+  
+  .agline {
+    width: 900px;
+    border: 1px solid rgba(236, 236, 244, 0.5);
+  }
+  
+  .agbutton {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #ececf4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    font-size: 13px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    color: #081c3a;;
+  }
+  
+  .agbutton:hover {
+    transform: scale(1.05);
+    background-color: #081c3a;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .meetAgents_agentsContainer {
+    width: 1360px;
+    height: 548px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 50px 0px 100px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .agentContent {
+    width: 270px;
+    height: 496px;
+    padding: 20px;
+    transition: 1s;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  .agentContent:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0 12px 36px -8px rgba(53, 64, 117, 0.1);
+  }
+  
+  .agentContent:hover .agentPictures img {
+    transform: scale(1.06);
+  }
+  
+  .agentPictures {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .agentPictures img {
+    transition: 1s;
+    width: 275px;
+    height: 325px;
+    border-radius: 10px;
+  }
+  
+  .agentName {
+    font-size: 25px;
+    color: #081c3a;
+    font-size: 700;
+    margin: 30px 25px 20px 10px;
+  }
+  
+  .agentlocation {
+    font-size: 17px;
+    color: #79879e;
+    margin: 0px 25px 20px 10px;
+  }
+  
+  .agentsLink{
+    text-decoration: none;
+  }
+  
+  /* footer板块 */
+  
+  
+  
+  footer {
+    width: 100%;
+  
+  }
+  
+  .footerBox {
+    width: 1364px;
+    height: 100px;
+    padding: 48px 0px 12px 36px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .footerInfo {
+    width: 540px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footerDestination {
+    padding: 9px 14px;
+    border-radius: 5px;
+    background-color: #f7f8fc;
+    letter-spacing: 2px;
+    color: #6c778b;
+    font-size: 15px;
+    margin-right: 15px;
+  }
+  
+  .footercountry {
+    color: #657590;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+    transition-timing-function: linear;
+  }
+  
+  .footercountry:hover {
+    cursor: pointer;
+    background-color: #f7f8fc;
+  }
+  
+  .footercovillaContainer {
+    height: 100px;
+  }
+  
+  .footercovilla {
+    color: #081c3a;
+    font-size: 25px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+  
+  .footercovilla span {
+    font-weight: 700;
+  }
+  
+  .copyrightcovilla {
+    color: #657590;
+    margin-top: 30px;
+  }
